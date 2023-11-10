@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tencent-sdk-python-ext"
+version = "0.1.0"
+description = ""
+authors = ["thomas <thomas.mingyu.guo@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tencent_sdk_python_ext"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tencentcloud-sdk-python-common = "^3.0.1023"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
