@@ -1,3 +1,9 @@
+"""
+@Description :   tencent-sdk-python-ext
+@Author      :   thomas.mingyu
+@Time        :   2023/11/11 22:35:48
+"""
+
 import os
 import configparser
 
@@ -61,7 +67,7 @@ class ProfileCredential:
         if not os.path.exists(file_path):
             raise TencentCloudSDKException('not find credentials path1')
 
-        return self.parser_credentials(file_path)
+        return self.parser_credentials()
 
     def parser_credentials(self) -> Union[Credential, STSAssumeRoleCredential]:
 
