@@ -17,7 +17,7 @@ pip install tencent-sdk-python-ext
   - cvm_metadata，载体为虚机角色
   - lambda，载体为云函数的角色
 
-本地配置的默认路径为~/.tencentcloud/credentials, 详情请[查看配置文件demo](./demo/credentials)（重要）
+本地配置的默认路径为~/.tencentcloud/credentials, 详情请[查看配置文件demo](./example/credentials)（重要）
 
 ```
 from tcc_ext.credentials import ProfileCredential
