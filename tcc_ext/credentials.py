@@ -23,6 +23,16 @@ _CRED_PATH = os.path.join(os.path.expanduser('~'), '.tencentcloud/credentials')
 _SOURCE_PROFILES = ('cvm_metadata', 'lambda')
 
 
+class ProfileParser:
+    def __init__(self, cred_path) -> None:
+        self._parser = configparser.ConfigParser()
+        self._parser.read(cred_path)
+
+    @property
+    def parser(self):
+        return self._parser
+
+
 class LambdaCredential:
     def __init__(self) -> None:
         self.token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN')
@@ -71,8 +81,7 @@ class ProfileCredential:
 
     def parser_credentials(self) -> Union[Credential, STSAssumeRoleCredential]:
 
-        parser = configparser.ConfigParser()
-        parser.read(self._cred_path)
+        parser = self.get_profile_parser()
         try:
             profile_obj = parser[self.profile]
         except KeyError:
@@ -130,3 +139,6 @@ class ProfileCredential:
 
             return STSAssumeRoleCredential(
                 secret_id, secret_key, role_arn, session_name, duration_seconds)
+
+    def get_profile_parser(self):
+        return ProfileParser(self._cred_path).parser

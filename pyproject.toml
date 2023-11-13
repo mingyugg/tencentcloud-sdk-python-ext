@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "tencent-sdk-python-ext"
+name = "tencentcloud-sdk-python-ext"
 version = "0.1.0"
 description = "腾讯云Python Sdk 插件"
 authors = ["thomas <thomas.mingyu.guo@gmail.com>"]
 readme = "README.md"
 packages = [{include = "tcc_ext"}]
 
-repository = "https://github.com/mingyugg/tencent-sdk-python-ext"
+repository = "https://github.com/mingyugg/tencentcloud-sdk-python-ext"
 
 [tool.poetry.dependencies]
 python = "^3.10"

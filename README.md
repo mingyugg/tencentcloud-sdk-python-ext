@@ -1,11 +1,11 @@
-# tencent-sdk-python-ext
+# tencentcloud-sdk-python-ext
 腾讯云Python Sdk 插件，包含以下功能的的扩展
 
 - [凭证管理](#凭证管理)
 
 安装方式
 ```
-pip install tencent-sdk-python-ext
+pip install tencentcloud-sdk-python-ext
 ```
 
 ## 凭证管理
