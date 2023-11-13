@@ -1,5 +1,5 @@
 """
-@Description :   tencent-sdk-python-ext
+@Description :   tencentcloud-sdk-python-ext
 @Author      :   thomas.mingyu
 @Time        :   2023/11/11 22:35:48
 """
