@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tencentcloud-sdk-python-ext"
-version = "0.1.0"
+version = "0.1.2"
 description = "腾讯云Python Sdk 插件"
 authors = ["thomas <thomas.mingyu.guo@gmail.com>"]
 readme = "README.md"

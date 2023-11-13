@@ -35,15 +35,17 @@ class ProfileParser:
 
 class LambdaCredential:
     def __init__(self) -> None:
+        self.secret_id = os.environ.get('TENCENTCLOUD_SECRETID')
+        self.secret_key = os.environ.get('TENCENTCLOUD_SECRETKEY')
         self.token = os.environ.get('TENCENTCLOUD_SESSIONTOKEN')
 
     @property
     def secretId(self):
-        return os.environ.get('TENCENTCLOUD_SECRETID')
+        return self.secret_id
 
     @property
     def secretKey(self):
-        return os.environ.get('TENCENTCLOUD_SESSIONTOKEN')
+        return self.secret_key
 
 
 class ProfileCredential:
@@ -72,10 +74,8 @@ class ProfileCredential:
                 source_profile: xxx (required, the role'carrier)
             ```
         """
-        file_path = os.path.join(
-            os.path.expanduser('~'), '.tencentcloud/credentials')
-        if not os.path.exists(file_path):
-            raise TencentCloudSDKException('not find credentials path1')
+        if not os.path.exists(self._cred_path):
+            raise TencentCloudSDKException(f'not find credentials path: {self._cred_path}')
 
         return self.parser_credentials()
 
