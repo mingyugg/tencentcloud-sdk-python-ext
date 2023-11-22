@@ -1,7 +1,7 @@
 """
 @Description :   tencentcloud-sdk-python-ext
 @Author      :   thomas.mingyu
-@Time        :   2023/11/11 22:35:48
+@Time        :   2023/11/22 10:10:37
 """
 
 import os
